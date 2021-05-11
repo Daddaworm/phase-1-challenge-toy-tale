@@ -12,4 +12,24 @@ document.addEventListener("DOMContentLoaded", () => {
       toyFormContainer.style.display = "none";
     }
   });
+  fetchToys(); //Calls fetchToys function when page loads
 });
+
+const toyCollectionDiv = document.getElementById('toy-collection'); 
+let createCard = document.createElement('div').className = 'card';
+
+
+
+
+
+//Step 1 - Create a fetch request
+function fetchToys(){
+fetch('http://localhost:3000/toys')
+  .then(resp => resp.json())
+  .then(data => console.log(data)); //Log verifies fetch returned obj
+    let toys = data;
+    toys.forEach(function(singleToy){ //Iterates over each toy
+
+    })
+
+}
